@@ -28,3 +28,9 @@ function factorial(n) {
 }
 
 module.exports = { add, subtract, multiply, divide, power, factorial };
+
+function modulo(a, b) {
+  if (b === 0) throw new Error('Modulo by zero');
+  return a % b;
+}
+module.exports.modulo = modulo;
