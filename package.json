@@ -1,0 +1,21 @@
+{
+  "name": "claude-github-demo",
+  "version": "1.0.0",
+  "description": "Demo repo for Claude Code PR review agent via GitHub MCP",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/**/*.js", "!src/**/*.test.js"]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0"
+  },
+  "keywords": ["claude", "mcp", "github", "pr-review"],
+  "license": "MIT"
+}
