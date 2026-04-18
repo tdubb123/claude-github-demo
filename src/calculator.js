@@ -28,3 +28,8 @@ function factorial(n) {
 }
 
 module.exports = { add, subtract, multiply, divide, power, factorial };
+
+function sqrt(n) {
+  return Math.sqrt(n);
+}
+module.exports.sqrt = sqrt;
