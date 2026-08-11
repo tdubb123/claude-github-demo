@@ -35,3 +35,8 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # Let Claude install deps and run the suite, so review findings are
+          # backed by real test output instead of static analysis alone.
+          claude_args: |
+            --allowedTools "Bash(npm ci),Bash(npm test),Bash(npm run test:*),Bash(npx jest),Bash(npx jest:*),Bash(node:*)"
