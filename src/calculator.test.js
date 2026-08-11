@@ -1,6 +1,6 @@
 'use strict';
 
-const { add, subtract, multiply, divide, power, factorial } = require('./calculator');
+const { add, subtract, multiply, divide, power, factorial, clamp } = require('./calculator');
 
 describe('add', () => {
   test('adds two positive numbers', () => expect(add(2, 3)).toBe(5));
@@ -30,6 +30,12 @@ describe('divide', () => {
 describe('power', () => {
   test('raises to power', () => expect(power(2, 10)).toBe(1024));
   test('power of zero', () => expect(power(5, 0)).toBe(1));
+});
+
+describe('clamp', () => {
+  test('leaves a value inside the range untouched', () => expect(clamp(5, 1, 10)).toBe(5));
+  test('clamps a value below the range up to min', () => expect(clamp(-3, 1, 10)).toBe(1));
+  test('clamps a value above the range down to max', () => expect(clamp(42, 1, 10)).toBe(10));
 });
 
 describe('factorial', () => {

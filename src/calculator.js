@@ -27,4 +27,10 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 
-module.exports = { add, subtract, multiply, divide, power, factorial };
+function clamp(value, min, max) {
+  if (value < min) return min;
+  if (value > max) return max;
+  return value;
+}
+
+module.exports = { add, subtract, multiply, divide, power, factorial, clamp };
