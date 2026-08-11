@@ -42,3 +42,7 @@ describe('factorial', () => {
     expect(() => factorial(2.5)).toThrow();
   });
 });
+
+describe('sqrt', () => {
+  test('square root of 4', () => expect(require('./calculator').sqrt(4)).toBe(2));
+});
